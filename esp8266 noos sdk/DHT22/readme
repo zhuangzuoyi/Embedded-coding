@@ -1,0 +1,5 @@
+ESP8266 NOOS SDK下读取传感器DHT22（驱动来自https://github.com/CHERTS/esp8266-dht11_22.git）
+
+
+读取到的结果如下：
+![image](dht22.PNG)
