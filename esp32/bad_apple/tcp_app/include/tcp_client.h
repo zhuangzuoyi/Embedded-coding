@@ -9,7 +9,7 @@ extern "C" {
 #endif
 
 //要连接TCP服务器地址
-#define TCP_SERVER_ADRESS "192.168.1.101" 
+#define TCP_SERVER_ADRESS "192.168.99.153" 
 
 
 //统一的端口号，包括TCP客户端或者服务端

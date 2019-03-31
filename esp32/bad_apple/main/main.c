@@ -111,7 +111,11 @@ void app_main()
     xEventGroupWaitBits(wifi_event_group, IPV4_GOTIP_BIT, false, true,portMAX_DELAY);
     
     ESP_LOGI(TAG, "connected to ap,and init upd\r\n");
-    create_tcp_client();
-    TaskHandle_t tx_rx_task;
-	xTaskCreate(&recv_data, "send_recv_data", 4096, NULL, 4, &tx_rx_task);
+    if(create_tcp_client()== ESP_OK)
+    {
+        TaskHandle_t tx_rx_task;
+        xTaskCreate(&recv_data, "send_recv_data", 4096, NULL, 4, &tx_rx_task);
+    }else{
+        ESP_LOGI(TAG,"connect to serve faile");
+    }
 }
